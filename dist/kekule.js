@@ -628,7 +628,13 @@ function init()
 	}
 	else  // in browser
 	{
-		scriptInfo = analysisEntranceScriptSrc($root.document);
+		scriptInfo = {
+			'src': this.__filename || '',
+			'path': __dirname + '/',
+			'modules': nodeModules,
+			//'useMinFile': false  // for debug
+			'useMinFile': true
+		};
 	}
 
 	files = getEssentialFiles(scriptInfo.modules, scriptInfo.useMinFile);

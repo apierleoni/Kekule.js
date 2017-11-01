@@ -16,7 +16,9 @@ if (!Array.prototype.indexOf)
 }
 
 // check if is in Node.js environment
-var isNode = (typeof process === 'object') && (typeof process.versions === 'object') && (typeof process.versions.node !== 'undefined');
+//var isNode = (typeof process === 'object') && (typeof process.versions === 'object') && (typeof process.versions.node !== 'undefined') ;
+//typeof angular == 'undefined'
+var isNode = True
 
 if (isNode)
 {
